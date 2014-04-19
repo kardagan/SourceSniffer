@@ -36,6 +36,9 @@
     "detail_title" : {"message" : "Source Sniffer -> Détails"},
     "detail_date" : {"message" : "Date"},
     "detail_result" : {"message" : "Résultat"},
-    "detail_search" : {"message" : "Recherche"}
+    "detail_search" : {"message" : "Recherche"},
+
+    "application_desc" : {"message" : "Recherche de texte/code dans la source HTML pendant que vous surfez."},
+    "application_name" : {"message" : "Source Sniffer"}
 
 }

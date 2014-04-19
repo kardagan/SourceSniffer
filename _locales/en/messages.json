@@ -38,4 +38,8 @@
     "detail_result" : {"message" : "Résultat"},
     "detail_search" : {"message" : "Recherche"}
 
+    "application_desc" : {"message" : "Searching text/code in HTML source while you navigate."},
+    "application_name" : {"message" : "Source Sniffer"}
+
+
 }

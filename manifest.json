@@ -1,8 +1,8 @@
 {
-    "name" :"Code Sniffer",
+    "name" :"__MSG_application_name__",
     "manifest_version":2,
     "version" :"1.0",
-    "description" : "Recherche de texte/code dans la source HTML pendant que vous surfez.",
+    "description" : "__MSG_application_desc__",
     "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
     "permissions": ["tabs"],
     "icons": {
@@ -26,4 +26,6 @@
     ],
     "options_page" : "Options/options.html",
     "default_locale" : "fr"
+
+
 }
