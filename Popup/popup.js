@@ -1,6 +1,9 @@
 var FindedAlert = chrome.extension.getBackgroundPage().getFindedAlert();
 if ( (FindedAlert !== null) && (FindedAlert.res.length)) {
-    $("#resultat").html( FindedAlert.res.length + " alerte" + (FindedAlert.res.length>1?"s":"") );
+    $("#resultat").html( FindedAlert.res.length + " " + getTraduction ( "alerte" + (FindedAlert.res.length>1?"s":"") ) );
+    if ( chrome.extension.getBackgroundPage().limit == FindedAlert.res.length ) {
+        $("#resultat").html( $("#resultat").html() + '<br>' + getTraduction("limitatteinte" , [chrome.extension.getBackgroundPage().limit]) );
+    }
     $("#sniffResult").remove();
     var totalbyid = [];
     for ( var i = 0 ; i < FindedAlert.res.length ; i++ ) {
@@ -10,6 +13,6 @@ if ( (FindedAlert !== null) && (FindedAlert.res.length)) {
             totalbyid[id] = 0;
         }
         totalbyid[id]++;
-        $("#res_" + id).html ( "-> " + FindedAlert.res[i].res.sniff.name + " : " + totalbyid[id] + " alerte" + (totalbyid[id]>1?"s":"") );
+        $("#res_" + id).html ( "-> " + FindedAlert.res[i].res.sniff.name + " : " + totalbyid[id] + " " + getTraduction ( "alerte" + (FindedAlert.res.length>1?"s":"") ) );
     }
 }

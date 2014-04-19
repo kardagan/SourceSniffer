@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Gestion de mes CodeSniffer</title>
+    <title trad="option_title"></title>
     <style type="text/css">
         body {margin:0;font-family: Arial}
         div.menu {
@@ -22,10 +22,12 @@
         div.menu .sniffList {display: none}
         div.formulaire {display: none}
         div.formulaire th {text-align:left}
-        div.formulaire th span {font-weight:normal}
+        div.formulaire th.cap {text-transform:capitalize}
+        div.formulaire th span.normal {font-weight:normal}
         div.formulaire textarea , div.formulaire input[type=text] , div.formulaire input[type=button] {width:400px;border:1px solid black}
         div.error {color:red;display: none}
         th.error {color:red}
+
     </style>
 </head>
 <body>
@@ -35,41 +37,42 @@
             <img src="../Img/file_search_128x128.png" width="128" heigth="128"/>
         </div>
         <div class="sniffList">
-        Liste de mes sniffers :<br>
+        <span trad="option_liste"></span> :<br>
         <select size="5" style="width:200px" id="sniflist">
         </select>
         <br>
-        <input type="button" value="Modifier le sniffer" id="btn_editer">
+        <input type="button" value="" trad="option_bt_modifier" id="btn_editer">
         <br>
-        <input type="button" value="Supprimer le sniffer" id="btn_supprimer">
+        <input type="button" value="" trad="option_bt_supprimer"  id="btn_supprimer">
         <br>
         </div>
-        <input type="button" value="Cr&eacute;er un nouveau sniffer" id="btn_creer">
+        <input type="button" value="" trad="option_bt_creer" id="btn_creer">
     </div>
 
     <!-- la saisie -->
     <div class="formulaire">
         <form name="theform">
             <table>
-                <tr><th id="name">Non :</th></tr>
+                <tr><th id="name" class="cap"><span trad="option_form_name"></span> :</th></tr>
                 <tr><td><input type="text" name="name"></td></tr>
-                <tr><th id="active">Actif : <span><input type="radio" name="active" value="yes" id="active_yes"><label for="active_yes">Oui</label> / <label for="active_no">Non</label><input type="radio" name="active" value="no" id="active_no"></span></th></tr>
-                <tr><th id="protocol">Protocol : <span><input type="radio" name="protocol" value="http" id="protocol_http"><label for="protocol_http">HTTP</label> / <input type="radio" name="protocol" value="https" id="protocol_https"><label for="protocol_https">HTTPS</label>  / <input type="radio" name="protocol" value="all" id="protocol_all"><label for="protocol_all">Les deux</label> </span></th></tr>
-                <tr><th id="domains">Domains : <div class="error"></div></th></tr>
+                <tr><th id="active" class="cap"><span trad="option_form_actif"></span> : <span class="normal"><input type="radio" name="active" value="yes" id="active_yes"><label for="active_yes"><span trad="oui"></span></label> / <label for="active_no"><span trad="non"></span></label><input type="radio" name="active" value="no" id="active_no"></span></th></tr>
+                <tr><th id="protocol" class="cap"><span trad="protocole"></span> : <span class="normal"><input type="radio" name="protocol" value="http" id="protocol_http"><label for="protocol_http">HTTP</label> / <input type="radio" name="protocol" value="https" id="protocol_https"><label for="protocol_https">HTTPS</label>  / <input type="radio" name="protocol" value="all" id="protocol_all"><label for="protocol_all">Les deux</label> </span></th></tr>
+                <tr><th id="domains" class="cap"><span trad="domaines"></span> : <div class="error"></div></th></tr>
                 <tr><td><textarea name="domains" rows="5"></textarea></td></tr>
-                <tr><th id="paths">Chemins : <div class="error"></div></th></tr>
+                <tr><th id="paths" class="cap"><span trad="chemins"></span> : <div class="error"></div></th></tr>
                 <tr><td><textarea name="paths" rows="5"></textarea></td></tr>
-                <tr><th id="mode">Type d'alerte :</th></tr>
-                <tr><td><input type="radio" name="mode" value="find" id="mode_find"><label for="mode_find"> Alerter si trouv&eacute;</label></td></tr>
-                <tr><td><input type="radio" name="mode" value="notfind" id="mode_notfind"><label for="mode_notfind"> Alerter si non trouv&eacute;</label></td></tr>
-                <tr><th id="sniff">Recherches :</th></tr>
+                <tr><th id="mode"><span trad="option_form_type"></span> :</th></tr>
+                <tr><td><input type="radio" name="mode" value="find" id="mode_find"><label for="mode_find"> <span trad="option_form_type_find"></span></label></td></tr>
+                <tr><td><input type="radio" name="mode" value="notfind" id="mode_notfind"><label for="mode_notfind"> <span trad="option_form_type_notfind"></span></label></td></tr>
+                <tr><th id="sniff"><span trad="option_form_sniffs"></span> :</th></tr>
                 <tr><td><textarea name="sniff" rows="5"></textarea></td></tr>
-                <tr><td><input type="button" value="Enregistrer" id="btn_enregistrer"></td></tr>
+                <tr><td><input type="button" value="" trad="option_bt_enreg" id="btn_enregistrer"></td></tr>
             </table>
         </form>
     </div>
 
     <script src="../Js/jquery.js"></script>
+    <script src="../Js/translateHTML.js"></script>
     <script src="../Js/sniffers.js"></script>
     <script src="options.js"></script>
 </body>

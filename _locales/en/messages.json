@@ -1,5 +1,41 @@
 {
-    "toto": {
-        "message": "coucouo ?"
-    }
+    "oui" : {"message" : "yes"},
+    "non" : {"message" : "no"},
+    "protocole" : {"message" : "protocol"},
+    "domaines" : {"message" : "domains"},
+    "chemins" : {"message" : "paths"},
+    "noalertnow" : {"message" : "No alert for moment"},
+    "alerte" : {"message" :"alert"},
+    "alertes" : {"message" :"alerts"},
+    "deleteallalerte" : {"message" : "Delete all alerts"},
+
+    "limitatteinte" : {"message" : "limit of $limit$ reached", "placeholders": { "limit": { "content": "$1" } } },
+
+    "option_title" : {"message" : "Manage of my Source Sniffer" },
+    "option_liste" : {"message"   : "List of my sniffers" },
+    "option_bt_modifier" : {"message" : "Edit sniffer" },
+    "option_bt_supprimer" : {"message" : "Delete le sniffer"},
+    "option_bt_creer" : {"message" : "Create new sniffer"},
+    "option_form_name" : {"message" : "Name"},
+    "option_form_actif" : {"message" : "Enable"},
+    "option_form_type" : {"message" : "Alert function"},
+    "option_form_type_find" : {"message" : "Alert if find si trouvé"},
+    "option_form_type_notfind" : {"message" : "Alert if not find"},
+    "option_form_sniffs" : {"message" : "Searchs (regulars expressions)"},
+    "option_bt_enreg" : {"message" : "Save"},
+    "option_nosniffsel" : { "message" : "Select a sniffer !!!!"},
+    "option_confirm_delete" : { "message" : "Delete sniffer"},
+
+    "error_caractere_miniregexp" : {"message" : "Accepted chars : [0-1a-zA-Z.*]" },
+    "obligatoire" : {"message" : "obligatory"},
+
+    "popup_title" : {"message" : "Source Sniffer"},
+    "popup_details" : {"message" : "Details"},
+    "popup_options" : {"message" : "Options"},
+
+    "detail_title" : {"message" : "Source Sniffer -> Détails"},
+    "detail_date" : {"message" : "Date"},
+    "detail_result" : {"message" : "Résultat"},
+    "detail_search" : {"message" : "Recherche"}
+
 }

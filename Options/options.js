@@ -1,7 +1,8 @@
-document.getElementById("btn_creer").addEventListener("click",creer);
-document.getElementById("btn_editer").addEventListener("click",editer);
-document.getElementById("btn_supprimer").addEventListener("click",supprimer);
-document.getElementById("btn_enregistrer").addEventListener("click",enregistrer);
+$("#btn_creer").click(creer);
+$("#btn_editer").click(editer);
+$("#btn_supprimer").click(supprimer);
+$("#btn_enregistrer").click(enregistrer);
+$("#sniflist").dblclick(editer);
 
 function load() {
     var s = sniffers.getListe();
@@ -24,10 +25,10 @@ function creer() {
 function supprimer() {
     var id = $("#sniflist").val();
     if ( id == null ) {
-        alert("Selectionnez un Sniff au moins !!!!");
+        alert( getTraduction("option_nosniffsel") );
     } else {
         var s = sniffers.getSniff(id);
-        if ( confirm("Supprimer le sniffer " + s.name ) ) {
+        if ( confirm( getTraduction("option_confirm_delete") + " " + s.name ) ) {
             s.delete();
             load();
         }
@@ -36,7 +37,7 @@ function supprimer() {
 function editer() {
     var id = $("#sniflist").val();
     if ( id == null ) {
-        alert("Selectionnez un Sniff au moins !!!!");
+        alert( getTraduction("option_nosniffsel") );
     } else {
         afficheSniff(id);
     }
@@ -44,6 +45,10 @@ function editer() {
 
 var currentEditing = null;
 function afficheSniff( id ) {
+
+    $("th div.error").hide();
+    $("th.error").removeClass("error");
+
     $("form[name=theform]")[0].reset();
     currentEditing = sniffers.getSniff(id);
     $("div.formulaire").css("display","block");

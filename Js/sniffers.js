@@ -25,27 +25,27 @@ function sniffer ( parent , datas ) {
         var errors = [];
 
         if (typeof p.active != "undefined" ) {
-            if (p.active != "yes" && p.active != "no") errors.push({ error: "obligatoire" , field:"active" });
+            if (p.active != "yes" && p.active != "no") errors.push({ error: getTraduction("obligatoire") , field:"active" });
         }
         if (typeof p.name != "undefined" ) {
-            if (p.name == "") errors.push({ error: "obligatoire", field:"name"});
+            if (p.name == "") errors.push({ error: getTraduction("obligatoire") , field:"name"});
         }
 
         if (typeof p.domains != "undefined" ) {
-            if ( ! p.domains.match( regfnmatch ) ) errors.push({ error : "Les domains doivent &ecirc;tre compos&eacute;s de caract&egrave;re alphanum&eacute;rique ou . ou * uniquement", field :"domains"});
+            if ( ! p.domains.match( regfnmatch ) ) errors.push({ error : getTraduction("error_caractere_miniregexp"), field :"domains"});
         }
 
         if (typeof p.protocol != "undefined" ) {
             if (p.protocol != "http" && p.protocol != "https" && p.protocol != "all") errors.push({ error : "obligatoire", field : "protocol" });
         }
         if (typeof p.paths != "undefined" ) {
-            if ( ! p.paths.match( regfnmatch ) ) errors.push({ error : "Les chemins doivent &ecirc;tre compos&eacute;s de caract&egrave;re alphanum&eacute;rique ou . ou * uniquement", field:"paths" });
+            if ( ! p.paths.match( regfnmatch ) ) errors.push({ error : getTraduction("error_caractere_miniregexp") , field:"paths" });
         }
         if (typeof p.mode != "undefined" ) {
-            if (p.mode != "find" && p.mode != "notfind") errors.push({ error : "obligatoire", field:"mode" });
+            if (p.mode != "find" && p.mode != "notfind") errors.push({ error : getTraduction("obligatoire"), field:"mode" });
         }
         if (typeof p.sniff != "undefined" ) {
-            if (p.sniff == "") errors.push({ error: "obligatoire", field:"sniff"});
+            if (p.sniff == "") errors.push({ error: getTraduction("obligatoire") , field:"sniff"});
         }
         if ( errors.length == 0 ) return true;
         return errors;

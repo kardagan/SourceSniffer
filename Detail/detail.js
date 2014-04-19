@@ -43,9 +43,9 @@ function getCtc ( FindedAlertRes , id ) {
     var ctc = $("<div class='ctc' id='" + id + "'>");
     for ( var i = 0 ; i < FindedAlertRes.length ; i++ ) {
         ctc.append("<p class='res'>" +
-            "Date : " + new Date(FindedAlertRes[i].date).toLocaleString() + "<br>" +
-            "Recherche : " + FindedAlertRes[i].res.sniff.sniff.replace(/</g,"&lt;").replace(/>/g,"&gt;") + "<br>" +
-            "R&eacute;sultat : <span>" + (FindedAlertRes[i].res.sniff.mode=='find'?FindedAlertRes[i].res.result.chaine.replace(/</g,"&lt;").replace(/>/g,"&gt;"):"Aucun r&eacute;sultat") + "</span>" +
+            getTraduction("detail_date") + " : " + new Date(FindedAlertRes[i].date).toLocaleString() + "<br>" +
+            getTraduction("detail_search") + " : " + FindedAlertRes[i].res.sniff.sniff.replace(/</g,"&lt;").replace(/>/g,"&gt;") + "<br>" +
+            getTraduction("detail_result") + " : <span>" + (FindedAlertRes[i].res.sniff.mode=='find'?FindedAlertRes[i].res.result.chaine.replace(/</g,"&lt;").replace(/>/g,"&gt;"):"Aucun r&eacute;sultat") + "</span>" +
         "</p>")
     }
     return ctc;
