@@ -14,12 +14,12 @@
     "option_title" : {"message" : "Manage of my Source Sniffer" },
     "option_liste" : {"message"   : "List of my sniffers" },
     "option_bt_modifier" : {"message" : "Edit sniffer" },
-    "option_bt_supprimer" : {"message" : "Delete le sniffer"},
+    "option_bt_supprimer" : {"message" : "Delete sniffer"},
     "option_bt_creer" : {"message" : "Create new sniffer"},
     "option_form_name" : {"message" : "Name"},
     "option_form_actif" : {"message" : "Enable"},
     "option_form_type" : {"message" : "Alert function"},
-    "option_form_type_find" : {"message" : "Alert if find si trouvé"},
+    "option_form_type_find" : {"message" : "Alert if find"},
     "option_form_type_notfind" : {"message" : "Alert if not find"},
     "option_form_sniffs" : {"message" : "Searchs (regulars expressions)"},
     "option_bt_enreg" : {"message" : "Save"},
@@ -33,10 +33,10 @@
     "popup_details" : {"message" : "Details"},
     "popup_options" : {"message" : "Options"},
 
-    "detail_title" : {"message" : "Source Sniffer -> Détails"},
+    "detail_title" : {"message" : "Source Sniffer -> Detail"},
     "detail_date" : {"message" : "Date"},
-    "detail_result" : {"message" : "Résultat"},
-    "detail_search" : {"message" : "Recherche"},
+    "detail_result" : {"message" : "Result"},
+    "detail_search" : {"message" : "Search"},
 
     "application_desc" : {"message" : "Searching text/code in HTML source while you navigate."},
     "application_name" : {"message" : "Source Sniffer"}

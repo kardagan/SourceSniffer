@@ -11,7 +11,7 @@
 
     "limitatteinte" : {"message" : "limite de $limit$ atteinte", "placeholders": { "limit": { "content": "$1" } } },
 
-    "option_title" : {"message" : "Gestion de mes CodeSniffer" },
+    "option_title" : {"message" : "Gestion de mes SourceSniffer" },
     "option_liste" : {"message"   : "Liste de mes sniffers" },
     "option_bt_modifier" : {"message" : "Modifier le sniffer" },
     "option_bt_supprimer" : {"message" : "Supprimer le sniffer"},
@@ -23,7 +23,7 @@
     "option_form_type_notfind" : {"message" : "Alerter si non trouvé"},
     "option_form_sniffs" : {"message" : "Recherches (expressions régulières)"},
     "option_bt_enreg" : {"message" : "Enregistrer"},
-    "option_nosniffsel" : { "message" : "Selectionnez un sniffer au moins !!!!"},
+    "option_nosniffsel" : { "message" : "Selectionnez au moins un sniffer !!!!"},
     "option_confirm_delete" : { "message" : "Supprimer le sniffer"},
 
     "error_caractere_miniregexp" : {"message" : "Caractères acceptés : [0-1a-zA-Z.*]" },
@@ -38,7 +38,7 @@
     "detail_result" : {"message" : "Résultat"},
     "detail_search" : {"message" : "Recherche"},
 
-    "application_desc" : {"message" : "Recherche de texte/code dans la source HTML pendant que vous surfez."},
+    "application_desc" : {"message" : "Recherche de texte/code dans la source HTML pendant votre navigation."},
     "application_name" : {"message" : "Source Sniffer"}
 
 }
